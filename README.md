@@ -6,14 +6,14 @@ Creates a github repo from a local repo from the comfort of your shell.
 
 1. Clone this repo:
     `$ git clone https://github.com/daj0ker/auto-repo.git`
-2. Change working directory
+2. Change working directory:
     `$ cd auto-repo`
-3. Change permissions
+3. Change permissions:
     `$ chmod +x auto-repo.py`
-4. Create symlink (optional)
+4. Create symlink (optional):
   `$ sudo ln -s CURRENT_PATH /usr/local/bin/auto-repo`
 
-$$ Usage
+## Usage
 
 This script uses SSH based authentication. You need to add SSH keys to your github account.account
 
