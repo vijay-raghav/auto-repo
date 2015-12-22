@@ -3,8 +3,8 @@
 Usage 
     python auto-repo.py username repo
 '''
-import os
 import sys
+from os import chdir, system
 
 args = sys.argv
 
@@ -16,21 +16,21 @@ handle = args[1]
 repo = args[2]
 
 try:
-    os.chdir(repo)
+    chdir(repo)
 except:
     print repo + " does not exist."
     exit()
 
-url = "https://github.com/" + handle + "/"
+url = "https://github.com/%s/" % handle
 
 cmds = [
     "git init",
     "git add .",
     "git commit -m \"Initial Commit\"",
-    "curl -u " + handle +  " https://api.github.com/user/repos -d " + "\'{\"name\":" + "\"" + repo + "\"}\'",
-    "git remote add origin git@github.com:" + handle + "/" + repo + ".git",
+    "curl -u %s https://api.github.com/user/repos -d \'{\"name\:\%s\"}\'" % (handle, repo),
+    "git remote add origin git@github.com:%s/%s.git" % (handle, repo),
     "git push origin master"
     ]
 
-for cmd in cmds:
-    os.system(cmd)
+for command in commands:
+    system(command)
