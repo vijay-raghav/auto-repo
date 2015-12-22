@@ -3,8 +3,8 @@
 Usage 
     python auto-repo.py username repo
 '''
-import os
 import sys
+from os import chdir, system
 
 args = sys.argv
 
