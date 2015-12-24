@@ -23,7 +23,7 @@ except:
 
 url = "https://github.com/%s/" % handle
 
-cmds = [
+commands = [
     "git init",
     "git add .",
     "git commit -m \"Initial Commit\"",
