@@ -1,6 +1,6 @@
 ## auto-repo
 
-Creates a github repo from a local repo from the comfort of your shell.
+Creates a github repo from a local repo the shell.
 
 ## Setup
 
